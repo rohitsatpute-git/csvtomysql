@@ -82,35 +82,6 @@ public class SpringBatchConfig {
         return new CustomerProcessor();
     }
 
-//  @Bean
-//  public FlatFileItemWriter<Customer> writer()
-//  {
-//      //Create writer instance
-//      FlatFileItemWriter<Customer> writer = new FlatFileItemWriter<>();
-//
-//      //Set output file location
-//
-//      writer.setResource(new FileSystemResource("D:/springboot/batch-processing-demo/src/main/resources/output.csv"));
-//      //All job repetitions should "append" to same output file
-//      writer.setAppendAllowed(true);
-//
-//      //Name field values sequence based on object properties
-//      writer.setLineAggregator(new DelimitedLineAggregator<>() {
-//
-//          {
-//              setDelimiter(",");
-//              setFieldExtractor(new BeanWrapperFieldExtractor<>() {
-//                  {
-//                      setNames(new String[] {"id", "firstName", "lastName", "email", "gender", "contactNo", "country", "dob" });
-//                  }
-//              });
-//          }
-//      });
-//      return writer;
-//  }
-
-
-
 
     @Bean
     public RepositoryItemWriter<Customer> writer() {
